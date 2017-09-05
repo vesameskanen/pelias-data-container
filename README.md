@@ -1,4 +1,4 @@
-# pelias-data-container
+'# pelias-data-container
 
 [![Build](https://api.travis-ci.org/HSLdevcom/pelias-data-container.svg?branch=master)](https://travis-ci.org/HSLdevcom/pelias-data-container)
 
@@ -44,8 +44,8 @@ Builder app can be run locally to get the data-container image:
 
 ```bash
 #leave dockerhub credentials unset to skip deployment
-export BUILD_INTERVAL=0 #run only once
-docker run -v /var/run/docker.sock:/var/run/docker.sock hsldevcom/pelias-data-container-builder
+#runs immediately and once if BUILD_INTERVAL=0
+docker run -v /var/run/docker.sock:/var/run/docker.sock -e BUILD_INTERVAL=0 hsldevcom/pelias-data-container-builder
 ```
 
 Another alternative is to install required components locally:
